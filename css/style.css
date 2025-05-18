@@ -1,0 +1,920 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Cairo:wght@200..1000&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    direction:rtl;
+    font-family: "Cairo";
+}
+
+html {
+    scroll-behavior:smooth;
+
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+header {
+    border: 1px solid rgb(205, 199, 199);
+}
+
+header .container {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header .container .nav ul {
+    display: flex;
+    align-items: center;
+    
+    
+}
+header .container .nav .nav-tog {
+
+}
+
+header .container .nav .nav-tog:hover +ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top:100%;
+    left: 0;
+    /* width: 100%;يجعل القائمة في المنتصف  */ 
+    transition: 0.3s;
+    
+
+}
+
+@media (min-width:768px) {
+    header .container .nav .nav-tog {
+        display: none;
+    }
+}
+@media (max-width:768px) {
+    header .container .nav ul {
+        display: none;
+    }
+}
+
+header .container .nav ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 20px 10px;
+    font-size: 14px;
+    font-weight: 700;
+    color: black;
+    transition: 0.3s;
+}
+
+header .container .nav a.active,
+header .container .nav a:hover
+{
+    background-color: #E20613;
+    color: white;
+}
+
+header .container .logo a img {
+    height: 50px;
+}
+
+header .container .media {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+@media (max-width:768px) {
+   header .container .media {
+        display: none;
+    }
+}
+
+
+.container .media i {
+    margin: 10px;
+    height: 35px;
+    width: 35px;
+    font-size: 20px;
+    display: flex;
+    background-color: #E20613;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+.container .media i:hover {
+    background-color: black;
+    scale: 1.1;
+}
+
+@media (min-width: 768px) {
+    .container {
+    width: 100%;
+    }
+}
+
+
+
+@media (min-width: 768px) and (min-width: 991px) {
+    .container {
+    width: 750px;
+    }
+}
+
+@media (min-width: 992px) and (min-width: 1199px) {
+    .container {
+    width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+    width: 1000px;
+    }
+}
+
+.hero {
+    background-image: url(/images-20250506T182004Z-001/images/background.webp);
+    /* height: 100vh; */
+}
+
+.hero .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+@media (max-width:768px) {
+    .hero .container {
+    flex-direction: column-reverse;
+     }
+ }
+
+.hero .container .img-hero img {
+    height: 500px;
+}
+
+.hero .container .hero-inf .media {
+    display: flex;
+    justify-content: center;
+}
+
+.hero .container .hero-inf .media i {
+    margin: 20px;
+    margin-top: 50px;
+    
+}
+.hero .container .hero-inf .cnect {
+    display: flex;
+    justify-content: center;
+}
+
+.hero .container .hero-inf .cnect button {
+    margin: 10px;
+    height: 40px;
+    width: 150px;
+    font-size: 20px;
+    background-color: #E20613;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5%;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero .container .hero-inf .cnect button:hover {
+    background-color: black;
+    scale: 1.1;
+}
+
+
+/* قسم الخدمات البداية  */
+
+.serves {
+    background-color: rgb(231, 231, 231);
+}
+
+ .serves-titel {
+    text-align: center;
+    align-items: center;
+    padding: 15px; ;
+}
+
+ .serves-parc {
+    text-align: center;
+    align-items: center;
+    padding-bottom: 25px;
+    font-size: 20px;
+}
+
+.serves .container .all-serves .serves img {
+    height: 50px
+}
+
+.serves .container .all-serves {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(200px ,1fr));
+    text-align: center;
+    align-items: center;
+    padding-bottom: 20px;
+    
+
+}
+
+.serves .container .all-serves .serves {
+    background-color: white;
+    margin: 10px;
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+    border-radius: 3%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.5s;
+    
+        
+}
+
+.serves .container .all-serves .serves:hover {
+    transform:scale(1.1);
+}
+
+.serves .container .all-serves .serves::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #E20613;
+    height: 0;
+    width: 2px;
+    transition: 0.5s;
+
+}
+
+.serves .container .all-serves .serves:hover::after { 
+    height: 100%;
+    
+    
+    
+}
+
+.serves .container .all-serves .serves h2 {
+    font-size: 20px;
+    color: #E20613;
+}
+
+/* نهاية قسم الخدمات  */
+
+.information .container .information-info {
+    width: 50%;
+}
+.information .container .information-info button {
+    margin: 10px;
+    height: 40px;
+    width: 130px;
+    font-size: 15px;
+    background-color: #E20613;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5%;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+    z-index: 1;
+    
+}
+
+.information .container .information-info button::after {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.information .container .information-info button::before {
+    content: "";
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.information .container .information-info button:hover::after {
+    
+    width: 50%;
+    
+}
+
+.information .container .information-info button:hover::before {
+    
+    width: 50%;
+    
+}
+
+.information .container {
+    display: flex;
+    padding: 20px;
+
+}
+.information .container .information-img {
+    width: 50%;
+    
+}
+.information .information-img img {
+    width: 100%;
+   
+    
+}
+
+/* بداية قسم الاعجاات  */
+
+.like {
+    background-image: url(/images-20250506T182004Z-001/images/st-bg.jpg);
+    padding: 75px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    
+}
+
+.like .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0000004a;
+
+}
+
+
+.like .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(200px ,1fr));
+   gap: 15px;
+
+}
+
+.like .container .like-info {
+    background-color:white;
+    text-align: center;
+    margin: 10px;
+    padding: 20px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.like .container .like-info:hover {
+    scale: 1.05;
+    background-color:rgba(255, 255, 255, 0.603);
+}
+
+.like .container .like-info  h3 {
+    font-size: 25px;
+    margin-bottom: 5px;
+
+}
+
+.like .container .like-info  p {
+    font-size: 20px;
+    
+
+}
+
+
+.courses {
+    background-color: #eee;
+   
+}
+
+.courses .container .all-courses  {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(200px ,1fr));
+}
+
+.courses .container .all-courses .cours {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    transition: 0.5s;
+    overflow: hidden;
+    border-radius: 2%;
+    
+}
+
+.courses .container .all-courses .cours:hover {
+    cursor: pointer;
+    transform:scale(1.04);
+
+}
+
+.courses .container .all-courses .cours img {
+    height: 250px;
+    width: 100%;   
+}
+
+.courses .container .all-courses .cours h2 {
+     text-align: center;
+    align-items: center;
+    color: #E20613;
+}
+
+.courses .container .all-courses .cours p {
+     text-align: center;
+    align-items: center;
+}
+
+.courses .container .all-courses .cours .price hr {
+    width: 175px;
+    margin: 5px;
+    text-align: center;
+    
+}
+
+.courses .container .all-courses .cours button{
+
+
+    margin: 10px;
+    height: 40px;
+    width: 150px;
+    font-size: 20px;
+    background-color: #E20613;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5%;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+
+} 
+
+.courses .container .all-courses .cours button:hover {
+    background-color: black;
+    scale: 1.1;
+}
+
+.working {
+    background-color: #eee;
+    padding: 25px 0;
+}
+
+.working .container .all-works {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(200px ,1fr));
+    gap: 15px;
+    
+}
+
+.working .container .all-works .work {
+
+   
+   border: 1px solid #ccc;
+   text-align: center;
+   align-items: center;
+   overflow: hidden;
+   cursor: pointer;
+   position: relative;
+}
+
+.working .container .all-works .work img {
+    width: 100%;
+    height: 100%;   
+}
+
+
+.working .container .all-works .work .work-info {
+    background-color:rgba(0, 0, 0, 0.345);
+    padding: 15px 0;
+    position: absolute;
+    
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 230px;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+
+}
+
+.working .container .all-works .work .work-info h3 {
+    color: #E20613;
+}
+
+.working .container .all-works .work:hover .work-info {
+    top: 0;
+    left: 0px;
+}
+
+
+
+
+
+.practes {
+    background-image: url(/images-20250506T182004Z-001/images/background.jpg);
+    margin: 25px;
+}
+
+.practes .container .skill .count {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.practes .container .skill .count :last-child {
+    border: 1px solid black ;
+    background-color: #dcbdbd;
+    padding: 0px 8px;
+    border-radius: 2px;
+    color: #E20613;
+}
+
+.practes .container .skill .procses {
+    width: 100%;
+    height: 30px;
+    background-color: rgb(184, 182, 182);
+    position: relative;
+    border-radius: 5px;
+
+    overflow: hidden;
+}
+
+.practes .container .skill .procses .prog span {
+    position: absolute;
+    height: 100%;
+    
+    background-color: #E20613;
+    transition: 0.5s;
+
+}
+
+.practes .container .skill .procses .prog span:hover {
+    width: 100% !important
+}
+
+
+.practes .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.practes-info,
+.practes-img {
+    width: 45%;
+}
+
+.practes-img img {
+    width: 100%;
+}
+
+.practes-img img:hover {
+    cursor: pointer;
+    filter: grayscale(100);
+    
+}
+
+.team {
+    background-color: #eee;
+}
+
+.team .container .all-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(200px ,1fr));
+    gap: 15px;
+}
+
+.team .container .all-box .box-team {
+    text-align: center;
+    background-color: white;
+    border-radius: 5%;
+    overflow: hidden;
+    padding-bottom: 5%;
+    transition: 0.5s;
+}
+
+.team .container .all-box .box-team .box-info h2 {
+    font-size: 20px;
+}
+.team .container .all-box .box-team .imag-medya {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.team .container .all-box .box-team .imag-medya img {
+    width: 80%;
+    border-radius: 0 0 10%;
+    cursor: pointer;
+}
+
+.team .container .all-box .box-team:hover  {
+    transform: translateY(-10px);
+}
+
+.team .container .all-box .box-team .imag-medya .medya {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 7px;
+} 
+
+.team .container .all-box .box-team .imag-medya .medya i {
+    margin-bottom: 10px;
+    height: 30px;
+    width: 30px;
+    font-size: 20px;
+    display: flex;
+    background-color: #E20613;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.team .container .all-box .box-team .imag-medya .medya i:hover {
+    scale: 1.1;
+    background-color: black;
+}
+
+.offers {
+    padding-bottom: 50px;
+    padding-top: 25px;
+    background-color: #eee;
+}
+
+.offers .container .all-offers {
+    
+    display:grid;
+    grid-template-columns: repeat(auto-fill , minmax(200px ,1fr));
+    text-align: center;
+    gap: 15px;
+    
+}
+
+.offers .container .all-offers .offer {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.offers .container .all-offers .offer:hover {
+    cursor: pointer;
+    transform: translateY(15px);
+}
+
+.offers .container .all-offers .offer::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    background-color: rgb(51,227,51);
+    top: 0;
+    left: -25px;
+    transform:rotate(-45deg);
+}
+
+.offers .container .all-offers .offer .offer-parag {
+    padding: 10px;
+}
+
+.offers .container .all-offers .offer .offer-parag ul li {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 10px;
+    border-top: 1px solid #eee;
+    position: relative;
+}
+
+.offers .container .all-offers .offer .offer-parag ul li::after {
+    position: absolute;
+    content: "\f0d9";
+    font-family: "font awesome 5 free";
+    font-weight: 900;
+    color: #E20613;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+
+
+}
+
+.offers .container .all-offers .offer h2 {
+    color: #E20613;
+    padding-left: 10px;
+    margin: 3px;
+}
+
+.offers .container .all-offers .offer h4 {
+    color: #000000;
+}
+
+.offers .container .all-offers .offer .btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.offers .container .all-offers .offer .btn button {
+    margin: 10px;
+    height: 40px;
+    width: 180px;
+    font-size: 15px;
+    background-color: #E20613;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5%;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+
+} 
+
+.offers .container .all-offers .offer .btn button:hover {
+    background-color: black;
+    scale: 1.1;
+}
+
+.belw {
+    padding: 60px;
+    color: white;
+    background-color: rgb(67,66,66);
+    background-image: url(/images-20250506T182004Z-001/images/footerbg.png);
+    border-top: 3px solid #E20613;
+}
+
+
+
+.belw .container {
+    display: grid;
+     grid-template-columns: repeat(auto-fill , minmax(200px ,1fr));
+     gap: 40px;
+     justify-content: center;
+     padding-bottom: 30px;
+    
+}
+
+.belw .container .about-serves ul li {
+    padding: 5px;
+    position: relative;
+    padding-right: 15px;
+}
+
+.belw .container .about-serves ul li::after {
+    position: absolute;
+    content: "\f0d9";
+    font-family: "font awesome 5 free";
+    font-weight: 900;
+    color: #E20613;
+    top: +30%;
+    right: 0;
+
+}
+
+.belw .container .about-cours ul li {
+    padding: 5px;
+    position: relative;
+    padding-right: 15px;
+}
+
+.belw .container .about-cours ul li::after {
+    position: absolute;
+    content: "\f0d9";
+    font-family: "font awesome 5 free";
+    font-weight: 900;
+    color: #E20613;
+    top: +30%;
+    right: 0;
+}
+.belw .container .counect input {
+    width: 250px;
+    height: 40px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    
+
+} 
+
+.belw .container .counect button {
+    
+    height: 40px;
+    width: 250px;
+    font-size: 15px;
+    background-color: #E20613;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5%;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.belw .container .counect button:hover {
+    background-color: black;
+    scale: 1.01;
+}
+
+hr {
+    width: 50%;
+    margin: auto;
+    border: 1px solid #eee;
+   
+}
+
+.belw .fotter  {
+    margin: auto;
+    text-align: center;
+    
+}
+
+.belw .fotter p {
+    padding-top: 25px;
+}
+
+.btn-whatsapp {
+    position: fixed;
+    bottom:30px;
+    left: 30px;
+    background-color: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: 0.3s;
+    box-shadow: 0 0 3px white;
+    
+}
+
+.btn-whatsapp:hover {
+    scale: 1.1;
+}
+
+
+.btn-whatsapp i {
+
+    font-size: 40px;
+    
+
+}
+
+
+
